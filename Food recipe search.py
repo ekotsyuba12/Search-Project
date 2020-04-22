@@ -15,9 +15,10 @@ print("Hello!")
 
 
 recipe = response.json()
-pprint(recipe)
-#recipe_hits = recipe['hits']
-#for hits in recipe_hits:
-    #hits['recipe']['url']
+#pprint(recipe)
+
+recipe_hits = recipe['hits']
+for hits in recipe_hits:
+    print(hits['recipe']['url'])
 
 #pprint(recipe['recipe_hits'])
