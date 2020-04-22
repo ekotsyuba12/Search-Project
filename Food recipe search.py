@@ -11,7 +11,6 @@ url = 'https://api.edamam.com/search?q={}&app_id={}&app_key={}'.format(ingredien
 response = requests.get(url)
 
 print (response)
-print("Hello!")
 
 
 recipe = response.json()
