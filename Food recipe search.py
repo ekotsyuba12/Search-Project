@@ -11,7 +11,7 @@ url = 'https://api.edamam.com/search?q={}&app_id={}&app_key={}'.format(ingredien
 response = requests.get(url)
 
 #print (response)
-#print ('Hi')
+
 
 
 recipe = response.json()
@@ -22,5 +22,12 @@ for hits in recipe_hits:
     pprint(hits['recipe']['label'])
     pprint(hits['recipe']['url'])
     pprint (hits ['recipe']['ingredientLines'])
+
+fridge = input(str(("Do you have everything in the fridge? ")))
+
+if fridge == 'yes':
+    print ('Enjoy cooking!')
+else:
+    print ('Go to: https://www.amazon.co.uk/Coffee-Snacks-International-Speciality-Food/b?ie=UTF8&node=340834031 ')
 
 #pprint(recipe['recipe_hits'])
