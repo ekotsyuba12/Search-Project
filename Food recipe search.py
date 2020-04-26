@@ -23,7 +23,7 @@ for hits in recipe_hits:
     pprint(hits['recipe']['url'])
     pprint (hits ['recipe']['ingredientLines'])
 
-fridge = input(str(("Do you have everything in the fridge? ")))
+fridge = input(str(("Do you have everything you need in the fridge? ")))
 
 if fridge == 'yes':
     print ('Enjoy cooking!')
