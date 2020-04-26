@@ -10,8 +10,8 @@ url = 'https://api.edamam.com/search?q={}&app_id={}&app_key={}'.format(ingredien
 
 response = requests.get(url)
 
-print (response)
-print ('Hi')
+#print (response)
+#print ('Hi')
 
 
 recipe = response.json()
@@ -19,6 +19,8 @@ recipe = response.json()
 
 recipe_hits = recipe['hits']
 for hits in recipe_hits:
-    print(hits['recipe']['url'])
+    pprint(hits['recipe']['label'])
+    pprint(hits['recipe']['url'])
+    pprint (hits ['recipe']['ingredientLines'])
 
 #pprint(recipe['recipe_hits'])
